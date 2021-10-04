@@ -11,7 +11,7 @@ module.exports = {
       colors: {
         blue: {
           100: '#EFF9FF',
-          200: '#1DA1F2',
+          200: '#1D9BF0',
           300: '#2795D9'
         },
         cyan: {

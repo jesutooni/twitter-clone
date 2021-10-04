@@ -40,23 +40,28 @@
 
     <!-- Aside Section -->
     <aside class="w-1/3 h-full border-l border-lighter px-8 py-2 relative">
-      <input type="text" class="rounded-full w-full p-2 pl-12 bg-cyan-200 focus:outline-none" placeholder="Search Twitter">
+      <input type="text" class="rounded-full w-full p-2 pl-12 bg-cyan-100 focus:outline-none mb-4" placeholder="Search Twitter">
       <span class="iconify absolute left-0 top-0 mt-5 ml-12 text-cyan-400" data-icon="akar-icons:search"></span>
-      <div class="w-full rounded-lg bg-cyan-100">
+
+      <!-- Trend Table -->
+      <div class="w-full bg-cyan-100 rounded-2xl overflow-hidden">
         <div class="flex items-center justify-between p-3">
-        <p class="text-lg font-bold">Trends for You</p>
-        <span class="iconify text-lg" data-icon="bytesize:settings"></span>
+          <p class="text-lg font-bold">Trends for You</p>
+          <span class="iconify text-lg" data-icon="bytesize:settings"></span>
         </div>
-      </div>
-      <div v-for="trend in trends" :key="trend.topic" class="w-full flex justify-between hover:bg-lighter p-3">
-        <div>
-          <p class="text-sm">{{ trend.top }}</p>
-          <p class="text-sm font-bold">{{ trend.topic }}</p>
-          <p class="text-sm">{{ trend.bottom }}</p>
+        <div v-for="trend in trends" :key="trend.topic" class="flex justify-between hover:bg-gray-200 p-3 cursor-pointer">
+          <div>
+            <p class="text-sm text-cyan-400">{{ trend.top }}</p>
+            <p class="text-sm font-bold">{{ trend.topic }}</p>
+            <p class="text-sm text-cyan-400">{{ trend.bottom }}</p>
+          </div>
+          <div class="h-8 w-8 hover:bg-blue-100 rounded-full flex justify-center items-center">
+            <i class="fas fa-ellipsis-h"></i>
+          </div>
         </div>
-          <i class="fas fa-ellipsis-h "></i>
+        <div class="p-4 hover:bg-cyan-200 text-blue-200 cursor-pointer">Show more</div>
       </div>
-      <div class="p-3 w-full hover:bg-lighter text-blue-200 border-t border-lighter">Show more</div>
+      
     </aside>
     
   </div>
@@ -121,7 +126,7 @@ export default {
           top: 'Movies & TV', topic: '#BBNaijaShineYaEye', bottom: '11K Tweets'
         },
         {
-          top: 'Trending in Nigeria', topic: 'Grammy', bottom: '30.6k Tweets'
+          top: 'Trending in Nigeria', topic: 'David Hundeyin', bottom: '30.6k Tweets'
         },
         {
           top: 'Movies', topic: '#SquidGames', bottom: '8744 Tweets'
