@@ -1,25 +1,27 @@
 <template>
-    <div class="lg:w-1/4 border-r border-lighter px-2 lg:px-8 py-2 flex justify-center lg:justify-end">
+    <div class="lg:w-1/4 border-r border-lighter px-2 lg:pl-0 border-2 py-2 flex justify-center lg:justify-end">
       <div class="w-3/4 flex flex-col justify-between">
         <div>
-          <div class="h-12 w-12 hover:bg-blue-100 text-3xl cursor-pointer text-blue-200 rounded-full flex justify-center items-center">
+          <div class="h-12 w-12 hover:bg-blue-100 transition duration-200 ease-in-out text-3xl cursor-pointer text-blue-200 rounded-full flex justify-center items-center">
             <i class="fab fa-twitter"></i>
           </div>
 
           <!-- Navigation -->
           <div>
-            <button v-for="nav in navs" :key="nav.id" :class="`flex items-center py-2 px-4 mb-3 hover:bg-gray-200 rounded-full mr-auto ${ nav.id === 1  ? 'font-extrabold' : ''}`">
+            <div v-for="nav in navs" :key="nav.id" class="group cursor-pointer">
+              <button :class="`flex items-center py-2 px-4 mb-3 group-hover:bg-gray-200 transition duration-200 ease-in-out rounded-full mr-auto ${ nav.id === 1  ? 'font-extrabold' : ''}`">
               <span class="iconify mr-4" :data-icon="nav.icon" data-width="26"></span>
               <p class="hidden lg:block text-lg text-left">{{ nav.title }}</p>
             </button>
+            </div>
           </div>
-          <button class="text-white bg-blue-200 rounded-full font-semibold w-12 h-12 lg:h-auto lg:w-full p-3 hover:bg-blue-300">
+          <button class="text-white bg-blue-200 rounded-full font-semibold w-12 h-12 lg:h-auto lg:w-full p-3 hover:bg-blue-300 transition duration-200 ease-in-out">
             <span class="hidden lg:block">Tweet</span>
             <span class="iconify lg:hidden" data-icon="mdi:feather" data-width="28"></span>
           </button>
         </div>
 
-        <button class="flex items-center justify-between lg:w-full hover:bg-gray-200 rounded-full p-2.5">
+        <button class="flex items-center justify-between lg:w-full hover:bg-gray-200 transition duration-200 ease-in-out rounded-full p-2.5">
           <div class="flex">
             <img src="../assets/profile-img.jpg" class="w-10 h-10 rounded-full" alt="">
             <div class="hidden lg:block ml-3 text-left">

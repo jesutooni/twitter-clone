@@ -1,7 +1,9 @@
 <template>
     <div class="h-full border-l border-lighter px-8 py-2 relative">
-      <input type="text" class="rounded-full w-full p-2 pl-12 bg-cyan-100 focus:outline-none mb-4" placeholder="Search Twitter">
-      <span class="iconify absolute left-0 top-0 mt-5 ml-12 text-cyan-400" data-icon="akar-icons:search"></span>
+        <div class="mb-4">
+            <input type="text" class="rounded-full w-full p-2 pl-12 bg-cyan-100 focus:outline-none" placeholder="Search Twitter">
+            <span class="iconify absolute left-0 top-0 mt-5 ml-12 text-cyan-400" data-icon="akar-icons:search"></span>
+        </div>
 
       <!-- Trend Table -->
       <div class="w-full bg-cyan-100 rounded-2xl overflow-hidden">
@@ -9,7 +11,7 @@
           <p class="text-lg font-bold">Trends for You</p>
           <span class="iconify text-lg" data-icon="bytesize:settings"></span>
         </div>
-        <div v-for="trend in trends" :key="trend.topic" class="flex justify-between hover:bg-gray-200 p-3 cursor-pointer">
+        <div v-for="trend in trends" :key="trend.topic" class="flex justify-between hover:bg-gray-200 transition duration-300 ease-in-out p-3 cursor-pointer">
           <div>
             <p class="text-sm text-cyan-400">{{ trend.top }}</p>
             <p class="text-sm font-bold">{{ trend.topic }}</p>
@@ -22,6 +24,23 @@
         <div class="p-4 hover:bg-cyan-200 text-blue-200 cursor-pointer">Show more</div>
       </div>
       
+      <!-- Follow Suggestions -->
+      <div class="w-full bg-cyan-100 rounded-2xl overflow-hidden mt-4">
+        <div class="p-3">
+          <p class="text-lg font-bold">Who to follow</p>
+        </div>
+        <div v-for="follow in Follows" :key="follow.name" class="flex hover:bg-gray-200 p-3 transition duration-300 ease-in-out cursor-pointer">
+            <div class="flex">
+            <img :src="follow.src" class="w-12 h-12 rounded-full" alt="">
+            <div class="hidden lg:block ml-3 text-left">
+              <p class="text-sm font-bold">{{ follow.name }}</p>
+              <p class="text-sm">@{{ follow.username }}</p>
+            </div>
+          </div>
+          <button class="text-sm text-white bg-black font-extrabold px-4 rounded-full border-2 ml-auto">Follow</button>
+        </div>
+        <div class="p-4 hover:bg-cyan-200 text-blue-200 cursor-pointer">Show more</div>
+      </div>
     </div>
     
 </template>
@@ -46,6 +65,11 @@ export default {
                 {
                 top: 'Movies', topic: '#SquidGames', bottom: '8744 Tweets'
                 }
+            ],
+            Follows: [
+                {name: 'Temporary1', username: 'empty', src: require('@/assets/triumph.jpg')},
+                {name: 'Temporary2', username: 'empty', src: require('@/assets/triumph.jpg')},
+                {name: 'Temporary3', username: 'empty', src: require('@/assets/triumph.jpg')}
             ]
         }
     }
