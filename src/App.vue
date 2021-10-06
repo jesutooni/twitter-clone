@@ -1,8 +1,10 @@
 <template>
-  <div id="app" class="flex container h-screen w-full">
-    <sidebar />
-    <middle class="w-1/2" />
-    <trends class="w-1/3" />
+  <div id="app" class="flex justify-center">
+    <div class="flex max-w-screen-xl">
+      <sidebar class="1/4 flex-grow"/>
+      <middle class="w-2/5 flex-grow" />
+      <trends class="w-1/4 flex-grow" />
+    </div>
   </div>
 </template>
 

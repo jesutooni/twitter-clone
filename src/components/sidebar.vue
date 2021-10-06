@@ -1,6 +1,6 @@
 <template>
-    <div class="lg:w-1/4 border-r border-lighter px-2 lg:pl-0 border-2 py-2 flex justify-center lg:justify-end">
-      <div class="w-3/4 flex flex-col justify-between">
+    <div class="border-r border-cyan-200 lg:pl-0 px-2 py-2 h-screen">
+      <div class="flex flex-col justify-between">
         <div>
           <div class="h-12 w-12 hover:bg-blue-100 transition duration-200 ease-in-out text-3xl cursor-pointer text-blue-200 rounded-full flex justify-center items-center">
             <i class="fab fa-twitter"></i>

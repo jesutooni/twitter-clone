@@ -17,7 +17,7 @@
             <p class="text-sm font-bold">{{ trend.topic }}</p>
             <p class="text-sm text-cyan-400">{{ trend.bottom }}</p>
           </div>
-          <div class="h-8 w-8 hover:bg-blue-100 rounded-full flex justify-center items-center">
+          <div class="h-8 w-8 rounded-full flex justify-center items-center">
             <i class="fas fa-ellipsis-h"></i>
           </div>
         </div>
@@ -67,9 +67,9 @@ export default {
                 }
             ],
             Follows: [
-                {name: 'Temporary1', username: 'empty', src: require('@/assets/triumph.jpg')},
-                {name: 'Temporary2', username: 'empty', src: require('@/assets/triumph.jpg')},
-                {name: 'Temporary3', username: 'empty', src: require('@/assets/triumph.jpg')}
+                {name: 'Temporary1', username: 'empty', src: require('../assets/triumph.jpg')},
+                {name: 'Temporary2', username: 'empty', src: require('../assets/triumph.jpg')},
+                {name: 'Temporary3', username: 'empty', src: require('../assets/triumph.jpg')}
             ]
         }
     }
