@@ -1,6 +1,5 @@
 <template>
-  <div class=" border-r border-cyan-200 xl:pl-0 px-2 py-2">
-    <div class="flex flex-col justify-between">
+  <div class=" border-r border-cyan-200 xl:pl-0 px-2 py-2 h-screen relative">
       <div class="">
         <div class="h-12 w-12 hover:bg-blue-100 transition duration-200 ease-in-out text-3xl cursor-pointer text-blue-200 rounded-full flex justify-center items-center">
           <i class="fab fa-twitter"></i>
@@ -21,7 +20,7 @@
         </button>
       </div>
 
-      <button class="flex items-center justify-between xl:w-full hover:bg-gray-200 transition duration-200 ease-in-out rounded-full p-2.5">
+      <button class="flex items-center justify-between xl:w-full hover:bg-gray-200 transition duration-200 ease-in-out rounded-full p-2.5 absolute bottom-0">
         <div class="flex">
           <img src="../assets/profile-img.jpg" class="w-10 h-10 rounded-full" alt="">
           <div class="hidden xl:block ml-3 text-left">
@@ -31,7 +30,6 @@
         </div>
         <i class="fas fa-ellipsis-h hidden xl:block"></i>
       </button>
-    </div>
   </div>
 </template>
 
