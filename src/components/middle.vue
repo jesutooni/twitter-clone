@@ -1,5 +1,5 @@
 <template>
-    <div class="">
+    <div class="h-screen overflow-auto">
         <div class="px-5 py-3 border-b border-cyan-200 flex items-center justify-between">
             <h1 class="text-xl font-bold">Home</h1>
             <div class="h-8 w-8 hover:bg-gray-200 transition duration-200 ease-in-out cursor-pointer rounded-full flex justify-center items-center">
@@ -155,21 +155,21 @@ export default {
                     src: require('../assets/olise.jpg'),
                     name: 'Eden', 
                     username: 'oliseyenum_', 
-                    tweetTime: 'Sep 25', 
+                    tweetTime: 'Oct 4', 
                     tweet: 'I need brentford to win this game please', 
                     replies: '3', 
                     retweets: '12', 
                     likes: '17'
                 },
                 {
-                    src: '',
-                    name: '', 
-                    username: '', 
-                    tweetTime: '', 
-                    tweet: '', 
-                    replies: '', 
-                    retweets: '', 
-                    likes: ''
+                    src: require('../assets/profile-img.jpg'),
+                    name: 'TheToniGrapher', 
+                    username: 'jesutooni_', 
+                    tweetTime: 'Oct 2', 
+                    tweet: 'I think I should clone twitter', 
+                    replies: '4', 
+                    retweets: '17', 
+                    likes: '24'
                 }
             ],
             newTweets: [

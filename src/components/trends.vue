@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full hidden lg:block border-l border-lighter px-8 py-2 relative">
+    <div class="h-screen overflow-auto hidden lg:block border-l border-lighter px-8 py-2 relative">
         <div class="mb-4">
             <input type="text" class="rounded-full w-full p-2 pl-12 bg-cyan-100 focus:outline-none" placeholder="Search Twitter">
             <span class="iconify absolute left-0 top-0 mt-5 ml-12 text-cyan-400" data-icon="akar-icons:search"></span>
