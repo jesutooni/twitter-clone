@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full">
+    <div class="">
         <div class="px-5 py-3 border-b border-cyan-200 flex items-center justify-between">
             <h1 class="text-xl font-bold">Home</h1>
             <div class="h-8 w-8 hover:bg-gray-200 transition duration-200 ease-in-out cursor-pointer rounded-full flex justify-center items-center">
@@ -25,7 +25,7 @@
                         <span class="iconify mx-2 cursor-pointer" data-icon="la:smile-solid" data-width="20"></span>
                         <span class="iconify mx-2 cursor-pointer" data-icon="tabler:calendar-time" data-width="20"></span>
                     </div>
-                    <button type="submit" class="h-10 px-4 text-white font-semibold bg-blue-200 hover:bg-blue-300 focus:outline-none rounded-full">Tweet</button>
+                    <button type="submit" :disabled="!isDisabled" class="h-10 px-4 text-white font-semibold bg-blue-200 hover:bg-blue-300 focus:outline-none rounded-full">Tweet</button>
                 </div>
             </form>
         </div>
@@ -194,7 +194,7 @@ export default {
     },
     computed: {
         isDisabled() {
-            return this.createdTweet.tweet > 0
+            return this.createdTweet.tweet;
         }
     }
 }

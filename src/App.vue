@@ -1,9 +1,9 @@
 <template>
-  <div id="app" class="flex justify-center">
-    <div class="flex max-w-screen-xl">
-      <sidebar class="1/4 flex-grow"/>
-      <middle class="w-2/5 flex-grow" />
-      <trends class="w-1/4 flex-grow" />
+  <div id="app" class="w-full flex justify-center">
+    <div class="flex sm:max-w-screen-md md:max-w-screen-lg xl:max-w-screen-xl">
+      <sidebar class="xl:w-1/5 "/>
+      <middle class="w-1/2 flex-grow" />
+      <trends class="w-1/3 flex-grow" />
     </div>
   </div>
 </template>

@@ -1,5 +1,5 @@
 <template>
-    <div class="h-full border-l border-lighter px-8 py-2 relative">
+    <div class="h-full hidden lg:block border-l border-lighter px-8 py-2 relative">
         <div class="mb-4">
             <input type="text" class="rounded-full w-full p-2 pl-12 bg-cyan-100 focus:outline-none" placeholder="Search Twitter">
             <span class="iconify absolute left-0 top-0 mt-5 ml-12 text-cyan-400" data-icon="akar-icons:search"></span>
@@ -32,7 +32,7 @@
         <div v-for="follow in Follows" :key="follow.name" class="flex hover:bg-gray-200 p-3 transition duration-300 ease-in-out cursor-pointer">
             <div class="flex">
             <img :src="follow.src" class="w-12 h-12 rounded-full" alt="">
-            <div class="hidden lg:block ml-3 text-left">
+            <div class="block ml-3 text-left">
               <p class="text-sm font-bold">{{ follow.name }}</p>
               <p class="text-sm">@{{ follow.username }}</p>
             </div>
@@ -67,9 +67,9 @@ export default {
                 }
             ],
             Follows: [
-                {name: 'Temporary1', username: 'empty', src: require('../assets/triumph.jpg')},
-                {name: 'Temporary2', username: 'empty', src: require('../assets/triumph.jpg')},
-                {name: 'Temporary3', username: 'empty', src: require('../assets/triumph.jpg')}
+                {name: 'HNG Internship 8.0', username: 'hnginternship', src: require('../assets/hng.jpg')},
+                {name: 'Dr. Chinonso Egemba', username: 'aproko_doctor', src: require('../assets/aproko_doctor.jpg')},
+                {name: 'Pastor Emmanuel Iren', username: 'pst_iren', src: require('../assets/pst_iren.jpg')}
             ]
         }
     }
