@@ -1,26 +1,26 @@
 <template>
-  <div class=" border-r border-cyan-200 xl:pl-0 px-2 py-2 h-screen relative">
+  <div class=" border-r border-cyan-200 py-2 h-screen relative">
       <div class="">
         <div class="h-12 w-12 hover:bg-blue-100 transition duration-200 ease-in-out text-3xl cursor-pointer text-blue-200 rounded-full flex justify-center items-center">
           <i class="fab fa-twitter"></i>
         </div>
 
         <!-- Navigation -->
-        <div>
+        <div class="">
           <div v-for="nav in navs" :key="nav.id" class="group cursor-pointer">
-            <button :class="`flex items-center py-2 px-4 mb-3 group-hover:bg-gray-200 transition duration-200 ease-in-out rounded-full mr-auto ${ nav.id === 1  ? 'font-extrabold' : ''}`">
-            <span class="iconify mr-4" :data-icon="nav.icon" data-width="26"></span>
-            <p class="hidden xl:block text-lg text-left">{{ nav.title }}</p>
-          </button>
+            <div :class="`inline-flex  xl:px-4 py-2 mb-3 px-2.5 group-hover:bg-gray-200 transition duration-200 ease-in-out rounded-full ${ nav.id === 1  ? 'font-extrabold' : ''}`">
+              <span class="iconify" :data-icon="nav.icon" data-width="26"></span>
+              <p class="hidden xl:block text-lg text-left ml-4">{{ nav.title }}</p>
+            </div>
           </div>
         </div>
-        <button class="text-white bg-blue-200 rounded-full font-semibold w-12 h-12 xl:h-auto xl:w-full p-3 hover:bg-blue-300 transition duration-200 ease-in-out">
+        <button class="text-white bg-blue-200 rounded-full font-semibold w-12 h-12 xl:h-auto xl:w-3/4 p-3 hover:bg-blue-300 transition duration-200 ease-in-out">
           <span class="hidden xl:block">Tweet</span>
           <span class="iconify xl:hidden" data-icon="mdi:feather" data-width="28"></span>
         </button>
       </div>
 
-      <button class="flex items-center justify-between xl:w-full hover:bg-gray-200 transition duration-200 ease-in-out rounded-full p-2.5 absolute bottom-0">
+      <button class="flex items-center justify-between xl:w-full hover:bg-gray-200 transition duration-200 ease-in-out rounded-full xl:p-2.5 absolute bottom-0">
         <div class="flex">
           <img src="../assets/profile-img.jpg" class="w-10 h-10 rounded-full" alt="">
           <div class="hidden xl:block ml-3 text-left">
