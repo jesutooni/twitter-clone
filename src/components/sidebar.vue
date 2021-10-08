@@ -14,7 +14,7 @@
             </div>
           </div>
         </div>
-        <button class="text-white bg-blue-200 rounded-full font-semibold w-12 h-12 xl:h-auto xl:w-3/4 p-3 hover:bg-blue-300 transition duration-200 ease-in-out">
+        <button @click="openTweet" class="text-white bg-blue-200 rounded-full font-semibold w-12 h-12 xl:h-auto xl:w-3/4 p-3 hover:bg-blue-300 transition duration-200 ease-in-out">
           <span class="hidden xl:block">Tweet</span>
           <span class="iconify xl:hidden" data-icon="mdi:feather" data-width="28"></span>
         </button>
@@ -80,6 +80,16 @@ export default {
                 }
             ]
         }
+    },
+    computed: {
+      makeTweet() {
+        return this.$store.state.makeTweet;
+      }
+    },
+    methods: {
+      openTweet() {
+        this.$store.commit('openTweet');
+      }
     }
 }
 </script>
